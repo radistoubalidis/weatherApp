@@ -28,22 +28,30 @@ $ pip install flask pandas psycopg2 requests flask_cors
 - Setup Flask development environment
     - In linux machines (for windows replace `expose` with `set`):
     ```shell
-    $ expose FLASK_APP=server.py
-    $ expose FLASK_ENV=development
-    $ expose FLASK_DEBUG=True
+    $ export FLASK_APP=server.py
+    $ export FLASK_ENV=development
+    $ export FLASK_DEBUG=True
     $ flask run
     ```
 
 # API Endpoints
-The app fetches data from the [openWeather API](https://openweathermap.org/api)
+- The app fetches data from the [openWeather API](https://openweathermap.org/api)
+- You can find a postman collection to run the endpoints
 
 ## 5-day Weather Forecast Prediction `/prediction`
-- Fetches the 5-day forecast from openWeather (based on coordinates from the form-data)
+- Fetches the 5-day forecast from openWeather (for a 1000m radius based on coordinates from the form-data)
 - Returns a json opbject with the weather forecast record for a specific timestamp (date and time) from the 5-day forecast
 
 #### URL Format:    
 ```
 localhost:5000/prediction?date={date}&time={time}
+```
+With form-data:
+```json
+    {
+        lat:{int},
+        lon:{int}
+    }
 ```
 **Params Example**
 
