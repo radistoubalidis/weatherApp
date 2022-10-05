@@ -12,4 +12,5 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup docker and run server
         run: |
+          chmod 755 run_server.sh
           ./run_server.sh
