@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "b9b08893-0064-4082-af54-5a04639f585e",
+		"name": "draxis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13788175"
+	},
+	"item": [
+		{
+			"name": "get weather forecast",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/forecast?lat=40.63&lon=22.94",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"forecast"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "40.63"
+						},
+						{
+							"key": "lon",
+							"value": "22.94"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "home",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "127.0.0.1:5000",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by date",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "lat",
+							"value": "40.63",
+							"type": "text"
+						},
+						{
+							"key": "lon",
+							"value": "22.94",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/prediction?date=20221005&time=210000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"prediction"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "20221005"
+						},
+						{
+							"key": "time",
+							"value": "210000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/metrics",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
