@@ -1,0 +1,15 @@
+name: Forecast metrics
+on: push
+  # schedule:
+  #   - cron: 0 12 * * *
+
+jobs:
+  todays_metrics:
+    name: Fetch today's forecast
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Setup docker and run server
+        run: |
+          ./run_server.sh
